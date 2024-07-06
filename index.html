@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBrgy.ph</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+        .logo {
+            width: 700px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Center horizontally */
+            margin: 0 auto; /* Center horizontally */
+        }
+        .create-account-text {
+            text-align: center;
+            margin-top: 20px; /* Add some space above */
+        }
+        .create-account-link {
+            font-size: 14px; /* Adjust font size as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="../logo.png" alt="Logo" class="logo">
+    </div>
+
+    <div class="body">
+        <div class="container">
+
+            <div class="create-account-text">
+                <p>Don't have a registration? <a href="index.php" class="create-account-link">Let's get started</a></p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the logo image element
+            var logoImg = document.querySelector('.logo');
+
+            // Listen for the end of the roll animation
+            logoImg.addEventListener('animationend', function () {
+                // Show the form after the roll animation is complete
+                var form = document.querySelector('.container'); // Assuming your form is inside an element with the class 'container'
+                form.style.display = 'flex'; // Display the form as a flex container
+                form.style.animation = 'flipForm 1s ease-in-out 1 forwards'; // Trigger the flip animation
+            });
+        });
+    </script>
+</body>
+</html>
